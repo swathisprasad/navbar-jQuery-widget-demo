@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.navbar.js"></script>
+<link rel="stylesheet" type="text/css" href="css/navbar.css">
+<meta charset="UTF-8">
+<title>Sample Navigation bar</title>
+</head>
+<body>
+	<div id="navigation">
+		<div style="margin-top: 35px;">Home</div>
+		<div>Blog</div>
+		<div>About</div>
+		<div>Contact</div>
+	</div>
+	<div class="btnContainer">
+		<button class="button" id="showNav">Show Navigation</button>
+		<button class="button" id="hideNav">Hide Navigation</button>
+	</div>
+</body>
+
+<script type="text/javascript">
+	$(function() {
+		var navbar = $("#navigation");
+		//instantiate navigation bar
+		navbar.navbar({
+			leftPos: false
+		});
+		
+		$("#showNav").on("click", function(event) {
+			navbar.navbar('show');
+		});
+		
+		$("#hideNav").on("click", function(event) {
+			navbar.navbar('hide');
+		});
+	});
+</script>
+
+</html>
